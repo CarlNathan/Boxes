@@ -16,11 +16,11 @@
 
 + (instancetype) initWithHeight: (float)height width: (float) width depth: (float) depth;
 
-- (id) initHeight: (float)height width: (float) width depth: (float) depth;
+- (id) initWithHeight: (float)height width: (float) width depth: (float) depth;
 
 -(float) calculateVolume;
 
--(void) canContain: (Box *) innerBox;
+-(void) canContainNumberOfBoxes: (Box *) innerBox;
 
 + (void) nestBoxesWithBox1: (Box *) box1 Box2: (Box *) box2;
 

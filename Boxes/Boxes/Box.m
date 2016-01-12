@@ -19,7 +19,7 @@
     return box;
 }
 
-- (id) initHeight: (float)height width: (float) width depth: (float) depth{
+- (id) initWithHeight: (float)height width: (float) width depth: (float) depth{
     _height = height;
     _width = width;
     _depth = depth;
@@ -32,20 +32,21 @@
     return volume;
 }
 
--(void) canContain: (Box *) innerBox{
+-(void) canContainNumberOfBoxes: (Box *) innerBox{
     
     int fit = [self calculateVolume]/[innerBox calculateVolume];
     NSLog(@"%@ will fit inside box %@ %dl time(s)", innerBox, self, fit);
 }
 
 + (void) nestBoxesWithBox1: (Box *) box1 Box2: (Box *) box2{
+    
     if ([box1 calculateVolume] > [box2 calculateVolume]) {
-        [box1 canContain:box2];
+        [box1 canContainNumberOfBoxes:box2];
     }else if ([box1 calculateVolume] == [box2 calculateVolume]){
         NSLog(@"Boxes are the same size");
     }else
     {
-        [box2 canContain:box1];
+        [box2 canContainNumberOfBoxes:box1];
     }
 }
 @end
