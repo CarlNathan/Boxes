@@ -22,4 +22,6 @@
 
 -(void) canContain: (Box *) innerBox;
 
++ (void) nestBoxesWithBox1: (Box *) box1 Box2: (Box *) box2;
+
 @end

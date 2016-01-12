@@ -20,6 +20,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"Box:%@ Volume: %fl", box2, [box2 calculateVolume]);
 
         [box1 canContain:box2];
+        [Box nestBoxesWithBox1:box1 Box2:box2];
     }
     return 0;
 }
