@@ -12,7 +12,7 @@
 int main(int argc, const char * argv[]) {
     {
         Box *box1 = [[Box alloc]initWithHeight:10.0 width:3.0 depth:9.0];
-        Box *box2 = [Box initWithHeight:3.0 width:4.0 depth:5.0];
+        Box *box2 = [Box boxWithHeight:3.0 width:4.0 depth:5.0];
         
         
         

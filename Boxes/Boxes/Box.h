@@ -14,9 +14,9 @@
 @property(nonatomic, assign) float width;
 @property(nonatomic, assign) float depth;
 
-+ (instancetype) initWithHeight: (float)height width: (float) width depth: (float) depth;
++ (instancetype) boxWithHeight: (float)height width: (float) width depth: (float) depth;
 
-- (id) initWithHeight: (float)height width: (float) width depth: (float) depth;
+- (instancetype) initWithHeight: (float)height width: (float) width depth: (float) depth;
 
 -(float) calculateVolume;
 

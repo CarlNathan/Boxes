@@ -10,7 +10,7 @@
 
 @implementation Box
 
-+ (instancetype) initWithHeight: (float)height width: (float) width depth: (float) depth{
++ (instancetype) boxWithHeight: (float)height width: (float) width depth: (float) depth{
     Box *box = [[Box alloc] init];
     box.height = height;
     box.width = width;
@@ -19,10 +19,15 @@
     return box;
 }
 
-- (id) initWithHeight: (float)height width: (float) width depth: (float) depth{
+- (instancetype) initWithHeight: (float)height width: (float) width depth: (float) depth{
+    self = [super init];
+    if (self){
+        
     _height = height;
     _width = width;
     _depth = depth;
+    
+    }
     return self;
 }
 
